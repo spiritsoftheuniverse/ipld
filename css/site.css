@@ -43,13 +43,25 @@ html.darktheme {
   --opacitylight :  1;
   --gradientdown : linear-gradient(180deg,rgba(128, 128, 128, 0.1) 0%,  rgba(128, 128, 128, 0) 100%);
 }
-
+@font-face {
+        font-family: 'orbitron';
+        src: url('orbitron.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+.orbitron
+{
+        font-family: orbitron;
+}
 body
 {
         background:var(--bgcolor);
         color:var(--color);
         font-family:Arial, Helvetica, sans-serif;
         margin:0;
+}
+.m24{
+        margin:24px;
 }
 .contentbody
 {
