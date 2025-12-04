@@ -52,6 +52,8 @@ html.darktheme {
 .orbitron
 {
         font-family: orbitron;
+        font-size:14px;
+        color:#b7ecf3;
 }
 body
 {
@@ -59,6 +61,7 @@ body
         color:var(--color);
         font-family:Arial, Helvetica, sans-serif;
         margin:0;
+        
 }
 .m24{
         margin:24px;

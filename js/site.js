@@ -7,8 +7,8 @@ $(document).ready(function(){
 })
 function showdata(d) {
     console.log("Loading:", d);
-
-    fetch(`html/${d}.html`)
+        const base = `https://spiritsoftheuniverse.github.io/ipld/`;
+    fetch(`${base}html/${d}.html`)
         .then(response => {
             if (!response.ok) throw new Error("Network error");
             return response.text();
