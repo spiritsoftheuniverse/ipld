@@ -63,8 +63,16 @@ body
         margin:0;
         
 }
+.mb
+{
+        margin-bottom:0px;
+}
 .m24{
         margin:24px;
+}
+p
+{
+        margin-top:0;
 }
 .contentbody
 {
