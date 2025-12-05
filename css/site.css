@@ -43,17 +43,35 @@ html.darktheme {
   --opacitylight :  1;
   --gradientdown : linear-gradient(180deg,rgba(128, 128, 128, 0.1) 0%,  rgba(128, 128, 128, 0) 100%);
 }
+table{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:14px;
+        max-width: 100%; 
+}
 @font-face {
         font-family: 'orbitron';
         src: url('orbitron.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
 }
+.generaltable td,
+.generaltable tr,
+.generaltable th {
+    padding: 4px;
+    border: 1px solid var(--bordercolor);
+}
+.generaltable td
+{
+        border-style:dotted;
+}
+.generaltable th {
+    background-color: var(--backgroundcolor);
+}
 .orbitron
 {
         font-family: orbitron;
         font-size:14px;
-        color:#b7ecf3;
+        color:#90bcc2;
 }
 body
 {
@@ -62,6 +80,11 @@ body
         font-family:Arial, Helvetica, sans-serif;
         margin:0;
         
+}
+.blur
+{
+        backdrop-filter: blur(4px);           /* the magic: blurs *behind* */
+  -webkit-backdrop-filter: blur(4px);   /* Safari support */
 }
 .mb
 {
