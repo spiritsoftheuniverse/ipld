@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Database Schema: anilist</title>
+<style>
+    body { font-family: sans-serif; padding: 20px; }
+    .generaltable { border-collapse: collapse; width: 100%; margin-bottom: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .generaltable th, .generaltable td { border: 1px solid #ccc; padding: 12px; text-align: left; vertical-align: top; }
+    .generaltable th { background-color: #007bff; color: white; }
+    .generaltable tr:nth-child(even) { background-color: #f9f9f9; }
+    
+    /* Schema formatting */
+    .schema-list { list-style: none; padding: 0; margin: 0; font-size: 0.9em; }
+    .schema-list li { margin-bottom: 4px; border-bottom: 1px solid #eee; padding-bottom: 2px; }
+    .col-name { font-weight: bold; color: #333; }
+    .col-type { color: #666; font-style: italic; }
+    .col-meta { font-size: 0.85em; color: #888; background: #eee; padding: 0 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Database Schema Overview: anilist</h1>
+
+<table class="generaltable">
+    <thead>
+        <tr>
+            <th width="15%">Table Name</th>
+            <th width="15%">Purpose</th>
+            <th width="10%">Category</th>
+            <th width="10%">Data Source</th>
+            <th width="50%">Schema (Column Details)</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td><strong>anilist_character_staff</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">character_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">staff_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">language</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_characters</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name_full</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">name_native</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">name_romaji</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">image_url</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">age</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">gender</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">description</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_genres</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">auto_increment</span></li><li><span class="col-name">name</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_media</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">title_romaji</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">title_english</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">title_native</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">format</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">type</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">status</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">description</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">episodes</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">chapters</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">volumes</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">duration</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">updated_at_anilist</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">start_date</span> <span class="col-type">(date)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">end_date</span> <span class="col-type">(date)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">average_score</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">popularity</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">cover_image</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">banner_image</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">season</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">season_year</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">updated_at</span> <span class="col-type">(timestamp)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">created_at</span> <span class="col-type">(timestamp)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">Default: CURRENT_TIMESTAMP</span> <span class="col-meta">DEFAULT_GENERATED</span></li><li><span class="col-name">updated_at_local</span> <span class="col-type">(timestamp)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">Default: CURRENT_TIMESTAMP</span> <span class="col-meta">DEFAULT_GENERATED on update CURRENT_TIMESTAMP</span></li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_media_characters</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">media_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">character_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">role</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_media_genres</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">media_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">genre_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_media_staff</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">media_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">staff_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">role</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_media_studios</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">media_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">studio_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">is_main</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_media_tags</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">media_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">tag_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_staff</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name_full</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">name_native</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">name_romaji</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">language</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">primary_occupations</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">image_url</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">description</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_studios</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">is_animation_studio</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>anilist_tags</strong></td>
+            <td><!-- Purpose Placeholder --></td>
+            <td><!-- Category Placeholder --></td>
+            <td><!-- Data Source Placeholder --></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">description</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">category</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">is_adult</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr></tbody></table></body></html>
