@@ -37,7 +37,7 @@ function makehtmlevents(contentbox)
         $('.schemalink').off().on('click touchstart',function(){
                 let id = $(this).attr('data')
                 console.log(id);
-                showdata('schemadata');
+                showdata(id, 'schemadata');
         });
         $('.returnlink').off().on('click touchstart',function(){
                 $('#schemadata').css('display', 'none');
