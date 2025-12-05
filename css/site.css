@@ -208,15 +208,10 @@ a{
     width: fit-content;
     display: inline-block; 
     max-width: 100%; /* Still important to prevent overflow */
-    max-height: calc(90vh - 80px);
+    max-height: calc(100vh - 51px);
     overflow-y: auto;
     overflow-x: hidden;
-    border: 1px solid transparent;
     padding: 4px;
-    border-radius: 2px;
-    box-sizing: border-box;
-    border-color: var(--bordercolor);
-    border-style:dotted;
 }
 
 .table-scroll.has-scrollbar {

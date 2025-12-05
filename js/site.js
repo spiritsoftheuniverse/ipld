@@ -45,11 +45,21 @@ function highlighttext(e, bold=false, highlight = true)
                 e.removeClass('highlighted').css('font-weight', 'normal');
         }
 }
-
+function debounce(func, delay) {
+        let timeoutId;
+        return function (...args) {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+}
+function updateSingleScrollBorder(scrollElement) {
+        if (!scrollElement) return;
+        const hasScrollbar = scrollElement.scrollHeight > scrollElement.clientHeight;
+        scrollElement.classList.toggle('has-scrollbar', hasScrollbar);
+        scrollElement.classList.toggle('scrollbar', hasScrollbar);
+}
 document.addEventListener('DOMContentLoaded', () => {
 
-        initializeLazyLoader();
-        makelazy();
         // --- Debounced function to update ALL tables ---
         // Used only for global events like window resize.
         const debouncedUpdateAllBorders = debounce(() => {
@@ -111,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mutations.forEach(mutation => {
                 if (mutation.type === 'childList') {
                         mutation.addedNodes.forEach(node => {
-                        if (node.nodeType !== Node.ELEMENT_NODE) return;
+                        if (node.nodeType !== Node.ELEMENT_NODE) return;        
 
                         const newTables = node.matches('table:not(.no-scale)') 
                                 ? [node] 
