@@ -16,12 +16,19 @@ function showdata(d) {
         .then(html => {
             // do something with the loaded HTML
             document.querySelector("#contentdata").innerHTML = html;
+            makehtmlevents();
         })
         .catch(err => {
             console.error("Failed to load:", err);
         });
 }
-
+function makehtmlevents()
+{
+        $('.schemalink').off().on('click touchstart',function(){
+                let id = $(this).attr('data')
+                console.log(id);
+        });
+}
 function highlighttext(e, bold=false, highlight = true)
 {
         if(highlight)

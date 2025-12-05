@@ -54,6 +54,20 @@ table{
         font-weight: normal;
         font-style: normal;
 }
+li
+{
+        margin-bottom:4px;
+}
+.col-meta
+{
+        background-color:var(--backgroundcolor);
+        font-style:italic;
+        padding:1px;
+        font-size:70%;
+    border: 1px solid var(--bordercolor);
+    color:var(--lighttext);
+    border-radius:2px;
+}
 .generaltable td,
 .generaltable tr,
 .generaltable th {
