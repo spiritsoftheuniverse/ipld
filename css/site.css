@@ -165,3 +165,60 @@ a{
         flex-direction:row;
         flex-wrap:wrap;
 }
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbarbg);
+        border-left:1px dashed var(--bordercolorlight);
+  cursor:pointer;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--scrollbarhandle);
+  cursor:pointer;
+}
+.scrollbar::-webkit-scrollbar-button:single-button {
+  background-color: var(--scrollbarbg);
+  display: block;
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Up button */
+.scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+        border-bottom:1px solid var(--bordercolor);
+  background: var(--scrollbarhandle);
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><polygon points="5,2 8,6 2,6" fill="white"/></svg>') center / 6px no-repeat;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><polygon points="5,2 8,6 2,6" fill="white"/></svg>') center / 6px no-repeat;
+}
+
+/* Down button */
+.scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+        border-top:1px solid var(--bordercolor);
+  background: var(--scrollbarhandle);
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><polygon points="2,4 8,4 5,8" fill="white"/></svg>') center / 6px no-repeat;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><polygon points="2,4 8,4 5,8" fill="white"/></svg>') center / 6px no-repeat;
+}
+.table-scroll {
+    width: fit-content;
+    display: inline-block; 
+    max-width: 100%; /* Still important to prevent overflow */
+    max-height: calc(90vh - 80px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid transparent;
+    padding: 4px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border-color: var(--bordercolor);
+    border-style:dotted;
+}
+
+.table-scroll.has-scrollbar {
+    /* Set your desired border color here */
+}
