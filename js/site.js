@@ -5,7 +5,7 @@ $(document).ready(function(){
                 showdata($(this).attr('data'));
         });
 })
-function showdata(d) {
+function showdata(d, contentbox = 'contentdata') {
     console.log("Loading:", d);
         const base = `https://spiritsoftheuniverse.github.io/ipld/`;
     fetch(`${base}html/${d}.html`)
@@ -15,19 +15,34 @@ function showdata(d) {
         })
         .then(html => {
             // do something with the loaded HTML
-            document.querySelector("#contentdata").innerHTML = html;
-            makehtmlevents();
+            document.querySelector("#"+contentbox).innerHTML = html;
+            makehtmlevents(contentbox);
         })
         .catch(err => {
             console.error("Failed to load:", err);
         });
 }
-function makehtmlevents()
+function makehtmlevents(contentbox)
 {
-        $('.schemalink').off().on('click touchstart',function(){
-                let id = $(this).attr('data')
-                console.log(id);
-        });
+        $('#schemadata').css('display', 'none');
+        $('#contentdata').css('display', 'none');
+        $('#'+contentbox).css('display', 'flex');
+        switch (contentbox) {
+                case 'contentdata':
+
+                break;
+                case 'schemadata':
+                        $('.schemalink').off().on('click touchstart',function(){
+                                let id = $(this).attr('data')
+                                console.log(id);
+                                showdata('schemadata');
+                        });
+                        $('.returnlink').off().on('click touchstart',function(){
+                                $('#schemadata').css('display', 'none');
+                                $('#contentdata').css('display', 'flex');
+                        });
+                break;
+        }
 }
 function highlighttext(e, bold=false, highlight = true)
 {
