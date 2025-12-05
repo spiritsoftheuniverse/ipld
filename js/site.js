@@ -32,17 +32,17 @@ function makehtmlevents(contentbox)
 
                 break;
                 case 'schemadata':
-                        $('.schemalink').off().on('click touchstart',function(){
-                                let id = $(this).attr('data')
-                                console.log(id);
-                                showdata('schemadata');
-                        });
-                        $('.returnlink').off().on('click touchstart',function(){
-                                $('#schemadata').css('display', 'none');
-                                $('#contentdata').css('display', 'flex');
-                        });
                 break;
         }
+        $('.schemalink').off().on('click touchstart',function(){
+                let id = $(this).attr('data')
+                console.log(id);
+                showdata('schemadata');
+        });
+        $('.returnlink').off().on('click touchstart',function(){
+                $('#schemadata').css('display', 'none');
+                $('#contentdata').css('display', 'flex');
+        });
 }
 function highlighttext(e, bold=false, highlight = true)
 {
