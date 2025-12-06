@@ -130,6 +130,22 @@ p
 a{
       color:var(--linkblank);  
 }
+.tdr
+{
+        font-family:orbitron;
+        border-bottom:1px dotted var(--bordercolor);
+        padding:2px;
+        text-align:right;
+        font-size:11px;
+        background-color:var(--grayboxlight);
+}
+.tdl
+{
+        border-bottom:1px dotted var(--bordercolor);
+        padding:2px;
+        word-wrap:break-word;
+        width: auto;
+}
 .contents
 {
         width:100%;
