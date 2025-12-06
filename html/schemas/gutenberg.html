@@ -1,0 +1,30 @@
+<div class="toggleButton returnlink" style="margin-bottom:8px;">Return to Collection</div>
+<table class="generaltable no-scale">
+    <thead>
+        <tr>
+            <th width="15%">Table Name</th>
+            <th width="50%">Schema (Column Details)</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td><strong>gutenberg_authors</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">auto_increment</span></li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>gutenberg_book_authors</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">book_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">author_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>gutenberg_book_bookshelves</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">book_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">bookshelf_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>gutenberg_book_subjects</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">book_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">subject_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>gutenberg_books</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">etext_number</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">type</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">issued</span> <span class="col-type">(date)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">title</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">language</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">locc</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">rights</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">read_online</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">epub3</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">epub</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">epub_no_images</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">kindle</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">kindle_epub3</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">kindle_no_images</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">plain_text</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">html_zip</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">rdf</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">other_links</span> <span class="col-type">(mediumtext)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>gutenberg_bookshelves</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">auto_increment</span></li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>gutenberg_subjects</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">auto_increment</span></li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr></tbody></table>
