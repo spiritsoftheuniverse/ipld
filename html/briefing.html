@@ -24,3 +24,10 @@
         <p>Each dataset in the library is presented through a consistent two to three-panel layout: left column, main panel, and a potential third panel. This familiar structure provides a stable interface while still allowing each implementation to adapt to the unique qualities of its data source. For example, an art-museum dataset may use the left column for filtering options and the right panel for browsing results. A dataset derived from a MediaWiki source may instead use the left column as a table of contents (which does not exist in Wiki sites), with the right panel dedicated to the article data. In cases where both filtering and hierarchical navigation are required, a third panel is added for query results. This system allows the library to accommodate any of its data structures while maintaining familiarity.</p>
         <p>Careful attention is given to preventing layout shift across the interface. When panels contain extensive content, scrollbars are applied selectively so that the left and right panels remain aligned and visible together. Additional optimizations such as dynamic-panel-sizing ensure stability in areas that would otherwise cause significant movement or resizing during interaction. The combination of science-fiction–inspired CSS and layout management contributes to the comfort in the library’s user interface.</p>
 </div>
+
+<div class="orbitron">
+        Faster Data Access
+</div>
+<div class="m24 flexcolumn"> 
+        Page layouts for query results do their best to present as much information at once as possible. Commonly in other sites, you would have thumbnails which are linked to full page views. The library however, when applicable, has the thumbnail coupled with its complete meta-data laid out in the query results, which makes the data for all returned records displayed immediately. This significantly cuts down on excess user navigation.
+</div>
