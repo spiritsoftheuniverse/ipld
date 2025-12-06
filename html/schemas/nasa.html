@@ -1,0 +1,30 @@
+<div class="flexrowplain" style="margin-bottom:8px;"><div class="toggleButton returnlink" >Return to Collection</div></div>
+<table class="generaltable no-scale">
+    <thead>
+        <tr>
+            <th width="15%">Table Name</th>
+            <th width="50%">Schema (Column Details)</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td><strong>nasa_api_key_usage</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">api_key</span> <span class="col-type">(varchar(64))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">request_count</span> <span class="col-type">(int unsigned)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">Default: 0</span> </li><li><span class="col-name">reset_timestamp</span> <span class="col-type">(int unsigned)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>nasa_apod</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">apod_date</span> <span class="col-type">(date)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">title</span> <span class="col-type">(text)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">explanation</span> <span class="col-type">(text)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">hd_url</span> <span class="col-type">(varchar(512))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">media_type</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">copyright</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">service_version</span> <span class="col-type">(varchar(10))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>nasa_keyword_map</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">nasa_id</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">keyword_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>nasa_keywords</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">keyword_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">auto_increment</span></li><li><span class="col-name">keyword_text</span> <span class="col-type">(text)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>nasa_media_items</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">nasa_id</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">title</span> <span class="col-type">(text)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">description</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">center</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">media_type</span> <span class="col-type">(enum(&#039;image&#039;,&#039;video&#039;,&#039;audio&#039;))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">date_created</span> <span class="col-type">(datetime)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">photographer</span> <span class="col-type">(varchar(512))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">location</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">secondary_creator</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">collection_json_href</span> <span class="col-type">(varchar(512))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>nasa_media_links</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">link_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">auto_increment</span></li><li><span class="col-name">nasa_id</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">href</span> <span class="col-type">(varchar(512))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">rel</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">render</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>nasa_sync_state</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">api_name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">last_processed_value</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">updated_at</span> <span class="col-type">(timestamp)</span> <span class="col-meta">NULLABLE</span> <span class="col-meta">Default: CURRENT_TIMESTAMP</span> <span class="col-meta">DEFAULT_GENERATED on update CURRENT_TIMESTAMP</span></li></ul></td>
+          </tr></tbody></table>

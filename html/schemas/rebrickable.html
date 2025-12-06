@@ -1,0 +1,45 @@
+<div class="flexrowplain" style="margin-bottom:8px;"><div class="toggleButton returnlink" >Return to Collection</div></div>
+<table class="generaltable no-scale">
+    <thead>
+        <tr>
+            <th width="15%">Table Name</th>
+            <th width="50%">Schema (Column Details)</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td><strong>rebrickable_colors</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">rgb</span> <span class="col-type">(char(6))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">is_trans</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">num_parts</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">num_sets</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">y1</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">y2</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_elements</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">element_id</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">part_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">color_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">design_id</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_inventories</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">version</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">set_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_inventory_minifigs</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">inventory_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">fig_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">quantity</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_inventory_parts</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">inventory_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">part_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">color_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">quantity</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">is_spare</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">img_url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_inventory_sets</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">inventory_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">set_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">quantity</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_minifigs</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">fig_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">num_parts</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">img_url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_part_categories</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_part_relationships</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">rel_type</span> <span class="col-type">(char(1))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">child_part_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">parent_part_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_parts</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">part_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">part_cat_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">part_material</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_sets</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">set_num</span> <span class="col-type">(varchar(20))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">year</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">theme_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">num_parts</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">img_url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>rebrickable_themes</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">parent_id</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr></tbody></table>

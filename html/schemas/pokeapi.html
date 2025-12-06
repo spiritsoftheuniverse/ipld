@@ -1,0 +1,60 @@
+<div class="flexrowplain" style="margin-bottom:8px;"><div class="toggleButton returnlink" >Return to Collection</div></div>
+<table class="generaltable no-scale">
+    <thead>
+        <tr>
+            <th width="15%">Table Name</th>
+            <th width="50%">Schema (Column Details)</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td><strong>abilities</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">effect</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>colors</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>egg_groups</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>evolution_chains</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>growth_rates</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>habitats</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>moves</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">accuracy</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">power</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">pp</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">type_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">damage_class</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">effect_short</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>pokemon</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">species_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">height</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">weight</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">base_experience</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">order_num</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">is_default</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">sprite_default_url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">sprite_shiny_url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">sprite_artwork_url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">sprite_home_url</span> <span class="col-type">(varchar(255))</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>pokemon_abilities</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">pokemon_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">ability_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">is_hidden</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">slot</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>pokemon_moves</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">pokemon_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">move_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">learn_method</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">version_group</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">level_learned_at</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>pokemon_species</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(100))</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">evolution_chain_id</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">evolves_from_species_id</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">color_id</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">shape_id</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">habitat_id</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">growth_rate_id</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">is_baby</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">Default: 0</span> </li><li><span class="col-name">is_legendary</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">Default: 0</span> </li><li><span class="col-name">is_mythical</span> <span class="col-type">(tinyint(1))</span> <span class="col-meta">NOT NULL</span> <span class="col-meta">Default: 0</span> </li><li><span class="col-name">hatch_counter</span> <span class="col-type">(int)</span> <span class="col-meta">NULLABLE</span> </li><li><span class="col-name">flavor_text</span> <span class="col-type">(text)</span> <span class="col-meta">NULLABLE</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>pokemon_species_egg_groups</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">species_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">egg_group_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>pokemon_stats</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">pokemon_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">stat_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">base_stat</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">effort</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>pokemon_types</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">pokemon_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">type_id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">slot</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>shapes</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>stats</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr><tr>
+            <td><strong>types</strong></td>
+            <td><ul class="schema-list"><li><span class="col-name">id</span> <span class="col-type">(int)</span> <span class="col-meta">NOT NULL</span> </li><li><span class="col-name">name</span> <span class="col-type">(varchar(50))</span> <span class="col-meta">NOT NULL</span> </li></ul></td>
+          </tr></tbody></table>
