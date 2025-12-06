@@ -57,6 +57,10 @@ table{
 li
 {
         margin-bottom:4px;
+        
+}
+td {
+        word-wrap:break-word;
 }
 .col-meta
 {
@@ -269,7 +273,7 @@ a{
     width: fit-content;
     display: inline-block; 
     max-width: 100%; /* Still important to prevent overflow */
-    max-height: calc(100vh - 51px);
+    max-height: calc(100vh - 52px);
     overflow-y: auto;
     overflow-x: hidden;
     padding: 4px;
