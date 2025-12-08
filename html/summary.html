@@ -2,33 +2,6 @@
 <div class="m24">
        <p> The Internet Public Library is a free, web-based research and reference environnment which displays information from web libraries and datasets. It is open to anyone who wants to look, can be used for discovery, learning, or reminiscing about a certain era of something. Artists who are looking for visual references can also learn from the meta-data, which provides context and sources to objects and stories. These datasets come from a range of sources including public APIs, cultural institutions, and community-maintained wikis. The system ingests heterogeneous data, organizes it, and renders it through a single page application. </p>
        <p>With large amounts of contextual data bundled together and presented through familiar UI between every implementation, the experience is transformative. It creates a peculiar kind of convenience that is unique from sites like Pinterest and Tumblr where media is only partially contextual or referenced. </p>
-       <p>Any datasets where mirroring is feasible and allowed, these become preservational efforts, making the library a place of stewardship for digital media.</p>
+       <p>In so many ways, digital media preservation has been in crisis, and we need to step up a defend our history in any way possible. The library is a place of stewardship for digital media where mirroring is a feasible and allowed process, whether it be open or gray-area data.</p>
 </div>
 
-<div class="orbitron">Considered Dataset Implementations</div>
-
-<div class="m24"> 
-        <p>Datasets which fall under consideration for integration into the library are those where data-quality<span style="color:rgb(72, 255, 0);">*</span> is adequate and data-use restrictions are lenient. Subject matter of any kind is otherwise welcome. The 2 dozen currently implemented datasets run across the domains of art, games, literature, media, music, science, and toys. New sources are evaluated and implemented during development. Some datasets are large, spanning millions of records collected over decades such as data from the Smithsonian or NASA. </p>
-        
-        <p class="mb"><span style="color:rgb(72, 255, 0);">*</span> Quality data is media-rich, complete or sufficiently complete in its metadata, and consistent in its structure.</p> 
-</div>
-
-<div class="orbitron">Layout Considerations</div> 
-<div class="m24"> 
-        <p>Each dataset in the library is presented through a consistent two to three-panel layout: left column, main panel, and a potential third panel. This familiar structure provides a stable interface while still allowing each implementation to adapt to the unique qualities of its data source. For example, an art-museum dataset may use the left column for filtering options and the right panel for browsing results. A dataset derived from a MediaWiki source may instead use the left column as a table of contents (which does not exist in Wiki sites), with the right panel dedicated to the article data. In cases where both filtering and hierarchical navigation are required, a third panel is added for query results. This system allows the library to accommodate any of its data structures while maintaining familiarity.</p>
-        <p class="mb">Careful attention is given to preventing layout shift across the interface. When panels contain extensive content, scrollbars are applied selectively so that the left and right panels remain aligned and visible together. Additional optimizations such as dynamic-panel-sizing ensure stability in areas that would otherwise cause significant movement or resizing during interaction. The combination of science-fiction–inspired CSS and layout management contributes to the comfort in the library’s user interface.</p>
-</div>
-
-<div class="orbitron">
-        Faster Data Access
-</div>
-<div class="m24 flexcolumn"> 
-        Page layouts for query results do their best to present as much information at once as possible. Commonly in other sites, you would have thumbnails which are linked to full page views. The library however, when applicable, has the thumbnail coupled with its complete meta-data laid out in the query results, which makes the data for all returned records displayed immediately. This significantly cuts down on excess user navigation.
-</div>
-
-<div class="orbitron">
-        Record Curation
-</div>
-<div class="m24 flexcolumn"> 
-        Real world data is messy, and even data from prestigious institutions such as Smithsonian and MET are littered with media-poor records. The library's queries are tuned to prune away any media-poor records. This ensures that users get what they came for. In some cases, copyright restrictions will limit the quality of a record in one way or another such as reducing an audio clip to but a few seconds or disabling the display of an image, and those are also under consideration for query omission.
-</div>
