@@ -1,7 +1,7 @@
 <div class="orbitron">Dataset Curation</div>
 <div class="m24">
         <p>A dataset which passes for implementation is one where data structure is clean &amp; consistent, has no usage-limitations for how anything is built around it, and is rich in media if any media is involved. Priding itself in its breadth, the library is open to any kind of subject matter as long as it meets said criteria.</p>
-        <p>Examples of winners include Metropolitan Museum of Art and The Smithsonian since their institutional data is well structured, their usage-restrictions are clearly stated; and even after data-pruning of records with no image urls, their record counts remain in abundance. For specialty data such as Mediawiki where there may be dependencies such as Mediawiki extensions, those which pass curation are the ones where the extension(s) do not conflict with the custom-parser that is used to interpret all Mediawiki implementations.</p>
+        <p>Examples of inclusions are Metropolitan Museum of Art and The Smithsonian since their institutional data is well structured, their usage-restrictions are clearly stated; and even after data-pruning of records with no image urls, their record counts remain in abundance. For specialty data such as Mediawiki where there may be dependencies such as Mediawiki extensions, those which pass curation are the ones where the extension(s) do not conflict with the custom-parser that is used to interpret all Mediawiki implementations.</p>
         <p>
                 Datasets which do not make it in curation are those that have usage-restrictions on how applications can be built. This excludes every commercial image API such as Pixabay and Unsplash. Non-image APIs with similar policies are also excluded, such as Giant Bomb when it was still active. The library displays plain records and this goes against the usage policy of all commercial APIs.
         </p>
@@ -18,5 +18,5 @@
 </div>
 <div class="orbitron">Filtration and Navigation</div>
 <div class="m24">
-        Curation beyond inclusion and exclusion involves the determining of filters and link navigation. 
+       The creation of filters and navigation options is a curatorial process at database level. In the case of representing organized museum objects from data of an institution such as Harvard, select object keys from the original json such as &quot;classifications&quot;, &quot;people&quot;, and &quot;type&quot;, are prioritized and migrated to relational tables in the database.
 </div>
