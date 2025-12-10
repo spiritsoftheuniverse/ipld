@@ -1,0 +1,14 @@
+<div class="orbitron">Ingestion</div>
+<div class="m24">
+        <p>The general flow of dataset ingestion from the server to local disk is:</p>
+                <ul>
+                        <li>Run a php script which iterates through facets of an API and saves each record as an individual JSON file.</li>
+                        <li>Create the database and its schematics based on curatorial analysis for the structure of a record's JSON data.</li>
+                        <li>Run a php script which inserts each record from the JSON files into the database.</li>
+                        <li>Export applicable filter/category data into a JSON file for the front-end to read on page-load.</li>
+                </ul>
+</div>
+<div class="orbitron">Synchronization</div>
+<div class="m24">
+        <p>The php synchronization script is ideally a refactored version of the ingestion script which automatically inserts new records into the database directly instead of saving them as JSON files.</p>
+</div>
