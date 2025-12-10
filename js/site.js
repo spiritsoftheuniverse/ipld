@@ -17,6 +17,7 @@ function showdata(d, contentbox = 'contentdata') {
             // do something with the loaded HTML
             document.querySelector("#"+contentbox).innerHTML = html;
             makehtmlevents(contentbox);
+            $('#'+contentbox).css('opacity', 0).animate({'opacity' : '1'}, 300);
         })
         .catch(err => {
             console.error("Failed to load:", err);
