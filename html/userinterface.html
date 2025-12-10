@@ -1,4 +1,4 @@
-<div class="orbitron">Theme</div>
+<div class="orbitron">Visual Design</div>
 <div class="m24">The library's user-interface is rendered in css and html, serving the look of space-age frosted panels and distinct border-lines as its theme. Graphical personality and functionality are both working together. Such visual design has been abandoned since the release of Windows Vista and has rarely been pursued on the web at all throughout the ages of css. This documentation uses samples of classes from the library's production css.</div>
 <div class="orbitron">Page Structure</div>
 <div class="m24">
@@ -8,7 +8,7 @@
                 3 Panel Structure
         </div>
         <div class="m24">
-                In a 3 panel structure, the left column is populated with filtration toggles while the right panel is populated with category-links, and the bottom panel is dedicated to rendering query results and potentially a gallery view.
+                In a 3 panel structure, the left column is populated with filtration toggles while the right panel is populated with category-links, and the bottom panel is dedicated to rendering query results and potentially the rare case of a gallery-view which shows additional information for a chosen record.
         </div>
          
 
@@ -18,6 +18,25 @@
         <div class="m24">
                <p> In a 2 panel structure, the bottom 3rd panel is omitted and only the top two panels are rendered. Mediawiki implementations are like this because the left column is dedicated to <em>table of contents</em> navigation with the right panel being where page and category results are rendered,  since Mediawiki does not use traditional category links.</p>
                 
-                <p>2 panel structure for unique implementations are fundamentally the same, If all filter and navigation fit into the left column, then the right panel can be used for results instead of category-links.</p>
+                <p>2 panel structure for unique implementations are fundamentally the same. If all filters and category-links fit into the left column, the right panel can then be used for results instead of category-links.</p>
+        </div>
+</div>
+<div class="orbitron">Themes</div>
+
+<div class="m24">
+        <p>
+                The library has two themes, <em>Shadows</em> and <em>Lights</em>, being dark and light. You can alternate between these themes in the config page of the site, or by using the shortcuts <b>ctrl/</b> or <b>ctrl*</b>. The theme properties are controlled by css variables. Each theme has the same number of properties with the same variable names.
+        </p>
+        <div class="orbitron">
+                Shadows
+        </div>
+        <div class="m24">
+                Shadows is the default theme for the library. It is the dark theme of the site. The background is of space in grayscale. The panels are tinted with pale green to represent neutrality and coolness.
+        </div>
+        <div class="orbitron">
+                Lights
+        </div>
+        <div class="m24">
+                Lights is somewhat an inverse of shadows theme. It is the light theme of the site. The background is the inverse of the grayscale space background, which makes it resemble white marble. The space theme loses its coherency in this theme. The panels are tinted with creamy orange to represent brightness and warmth.
         </div>
 </div>
