@@ -3,6 +3,11 @@
         <p>Utilizing the Laragon local development environment, the library is maintained through the L(W)AMP stack : Linux/Windows, Apache server, MySQL, and PHP. Visual Code is used with code coloring necessary for the languages of CSS, HTML, PHP, and Javascript. Whatever version of Gemini that is the latest in Google AI Studio is the LLM of use for coding assistance. If Gemini is temporarily rate limited, then Chat GPT is used for small jobs. Github is bound to Visual Studio Code for quick pushes as a means for critical code backup and restoration.</p>
         
 </div>
+<div class="orbitron">Databases</div>
+<div class="m24">
+        <p>Each dataset implementation has its own database in MySQL. Mediawiki datasets share a redundant schema that is copied in structure for every addition. All other databases are uniquely created based on the structure of meta-data that is retrieved from an API or data source. This causes the indexing to also be unique between each implementation; utilizing b-tree, full-text, and composite indexes where appropriate.</p>
+        
+</div>
 <div class="orbitron">Index Page</div>
 <div class="m24">
         <p>
