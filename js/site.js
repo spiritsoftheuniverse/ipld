@@ -44,8 +44,7 @@ function makehtmlevents(contentbox)
                 $('#contentdata').css('display', 'flex');
         });
         $('.pagelink').off().on('click touchstart',function(){
-                highlighttext( $('.pagelink'), false, false);
-                highlighttext( $(this), false, true);
+                highlighttext( $('.tocbox a'), false, false);
                 $('.tocbox a[data="'+$(this).attr('data')+'"]').click();
         });
 }
