@@ -150,6 +150,36 @@ a{
         word-wrap:break-word;
         width: auto;
 }
+.flexrow
+{
+        display:flex;
+        flex-direction:row;
+        padding:4px;
+        gap:4px;
+        border-top:1px solid var(--bordercolorlight);
+        position:relative;
+        max-width:100%;
+}
+.flexrow::before{
+        content:"";
+        width:1px;
+        height:1px;
+        background-color:var(--bordercolor);
+        position:absolute;
+        top:-1px;
+        right:-2px;
+
+}
+.flexrow::after{
+        content:"";
+        width:1px;
+        height:1px;
+        background-color:var(--bordercolor);
+        position:absolute;
+        top:-1px;
+        left:-2px;
+
+}
 .contents
 {
         width:100%;
