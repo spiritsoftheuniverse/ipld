@@ -20,13 +20,19 @@
 <div class="m24">
         <p>
                 The interactive components in the UI of an implementation which behave as catalysts for queries are filter toggles, category links, and search field.
-                Category links and search confirmations trigger the running of a controller script on the server via ajax with filter and query information passed to post data. 
+                Category links and search confirmations trigger the running of a controller script on the server via ajax. Filter and query information passed to post data in this process and waits for a response.
+        </p>
+</div>
+<div class="orbitron">Server Response</div>
+<div class="m24">
+        <p>
                 The controller script assigns a get value from the parameter segment of the url, which is compared in a switch statement in order to determine the assignment of configuration files and further script includes.
         </p>
         <p>
-                The configuration file starts a session, then gets sensitive strings from an .env file and stores them as php variables in preparation for any api calls or database access.
+                The configuration file starts a session, then gets sensitive strings from an .env file and stores them as php variables in preparation for any api calls or database access. It is usually a dependency for any includes which follow it.
         </p>
         <p>
-                Any include after the configuration file are scripts which validate post data and query the database for return data which is echoed as json to the front-end for html parsing.
+                Any includes after the configuration file are scripts which validate post data and query the database for record data that is echoed as json to the front-end for html parsing. 
+                In this process, queries are constructed with post data for filtration, category specifications, or text search. One running script accepts all methods of query, and post data is compared to determine which method is to be used as the query.
         </p>
 </div>
