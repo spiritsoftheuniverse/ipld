@@ -43,6 +43,11 @@ function makehtmlevents(contentbox)
                 $('#schemadata').css('display', 'none');
                 $('#contentdata').css('display', 'flex');
         });
+        $('.pagelink').off().on('click touchstart',function(){
+                highlighttext( $('.pagelink'), false, false);
+                highlighttext( $(this), false, true);
+                showdata($(this).attr('data'));
+        });
 }
 function highlighttext(e, bold=false, highlight = true)
 {
