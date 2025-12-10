@@ -26,7 +26,7 @@
 <div class="orbitron">Server Response</div>
 <div class="m24">
         <p>
-                When receiving the call from ajax, the controller script assigns a get value from the parameter segment of the url, which is compared in a switch statement in order to determine the assignment of configuration files and further script includes.
+                When receiving the call from ajax, the controller script assigns a get value from the parameter segment of the url, which is compared in a switch statement in order to determine the assignment of configuration files and inclusion of the target script(s).
         </p>
         <p>
                 The configuration file starts a session, then gets sensitive strings from an .env file and stores them as php variables in preparation for any api calls or database access. It is usually a dependency for any includes which follow it.
