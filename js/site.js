@@ -1,7 +1,7 @@
 $(document).ready(function(){
         $('.tocbox a').off().on('click touchstart',function(){
                 highlighttext( $('.tocbox a'), false, false);
-                highlighttext( $(this), true, true);
+                highlighttext( $(this), false, true);
                 showdata($(this).attr('data'));
         });
 })
