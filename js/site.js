@@ -6,7 +6,7 @@ $(document).ready(function(){
         });
 })
 function showdata(d, contentbox = 'contentdata') {
-    console.log("Loading:", d);
+    //console.log("Loading:", d);
         const base = `https://spiritsoftheuniverse.github.io/ipld/`;
     fetch(`${base}html/${d}.html`)
         .then(response => {
