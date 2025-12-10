@@ -1,7 +1,6 @@
 <div class="orbitron"> Development Environment</div>
 <div class="m24">
-        <p>Utilizing the Laragon local development environment, the library is maintained through the L(W)AMP stack : Linux/Windows, Apache server, MySQL, and PHP. Visual Code is used with code coloring necessary for the languages of CSS, HTML, PHP, and Javascript. Whatever version of Gemini that is the latest in Google AI Studio is the LLM of use for coding assistance. If Gemini is temporarily rate limited, then Chat GPT is used for small jobs. Github is bound to Visual Studio Code for quick pushes as a means for critical code backup and restoration.</p>
-        
+        <p>Utilizing the Laragon local development environment, the library is maintained through the L(W)AMP stack : Linux/Windows, Apache server, MySQL, and PHP. Visual Code is used with code coloring necessary for the languages of CSS, HTML, PHP, and Javascript. Whatever version of Gemini that is the latest in Google AI Studio is the LLM of use for coding assistance. If Gemini is temporarily rate limited, then Chat GPT is used with caution alongside with its small jobs. Github is bound to Visual Studio Code for periodic commits as a means of critical code backup and restoration.</p>
 </div>
 <div class="orbitron">Databases</div>
 <div class="m24">
@@ -21,5 +20,13 @@
 <div class="m24">
         <p>
                 The interactive components in the UI of an implementation which behave as catalysts for queries are filter toggles, category links, and search field.
+                Category links and search confirmations trigger the running of a controller script on the server via ajax with filter and query information passed to post data. 
+                The controller script assigns a get value from the parameter segment of the url, which is compared in a switch statement in order to determine the assignment of configuration files and further script includes.
+        </p>
+        <p>
+                The configuration file starts a session, then gets sensitive strings from an .env file and stores them as php variables in preparation for any api calls or database access.
+        </p>
+        <p>
+                Any include after the configuration file are scripts which validate post data and query the database for return data which is echoed as json to the front-end for html parsing.
         </p>
 </div>
