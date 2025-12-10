@@ -18,6 +18,9 @@
 <div class="orbitron">Synchronization</div>
 <div class="m24">
         <p>The php synchronization script for datasets from APIs is ideally a refactored version of the ingestion script which automatically inserts new records into the database or updates them directly instead of saving them as JSON files. </p>
+        <p>
+                Some synchronization involves clearing an entire database and reinserting data from a freshly downloaded dump. Implemented datasets which synchronize with this method include Rebrickable, PokemonTCG, and Scryfall, as they regularly dump their databases.
+        </p>
         <p>Synchronization for Mediawiki datasets are developed as maintenance script extensions which run with the Mediawiki php library:</p>
                 <ul>
                         <li>The fetching script downloads all pages created or updated from within range of a specified date and saves them all as individual JSON files.</li>
