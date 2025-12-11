@@ -16,7 +16,7 @@
 </div>
 <div class="orbitron">Ingestion Failure</div>
 <div class="m24">
-        Even if a dataset is cleared for implementation during the curation process, the ingestion process for said dataset may be too taxing of a procedure. An example of a dataset likely to fail during ingestion would be a Mediawiki dataset which relies on too many Mediawiki extensions, or uses extensions which conflict with the custom-parser that determines the final html output.
+        Even if a dataset is cleared for implementation during the curation process, the ingestion process for said dataset may be too taxing. An example of a dataset likely to fail during ingestion would be a Mediawiki dataset which relies on too many Mediawiki extensions, which leads to conflict with the custom-parser that determines the final html output.
 </div>
 <div class="orbitron">Synchronization</div>
 <div class="m24">
@@ -30,8 +30,8 @@
                 Some synchronization involves clearing an entire database and reinserting data from a freshly downloaded dump. Implemented datasets which synchronize using this method include Rebrickable, PokemonTCG, and Scryfall, as they regularly dump their databases.
         </p>
         <p>Synchronization for Mediawiki datasets are developed as maintenance script extensions which run with the Mediawiki php library:</p>
-                <ul>
-                        <li>The fetching script downloads all pages created or updated from within range of a specified date and saves them all as individual JSON files.</li>
-                        <li>The create/update script reads each JSON file and creates non-existing pages from them or updates any pages where the local revision is older.</li>
-                </ul>
+        <ul>
+                <li>The fetching script downloads all pages created or updated from within range of a specified date and saves them all as individual JSON files.</li>
+                <li>The create/update script reads each JSON file and creates non-existing pages from them or updates any pages where the local revision is older.</li>
+        </ul>
 </div>
