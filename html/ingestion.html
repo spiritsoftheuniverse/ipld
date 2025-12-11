@@ -3,7 +3,7 @@
         <p>The general flow of dataset ingestion from an API to local disk:</p>
                 <ul>
                         <li>Run a php script which iterates through facets of an API and saves each record as an individual JSON file.</li>
-                        <li>Create the database and its schematics based on curatorial analysis for the structure of a record's JSON data.</li>
+                        <li>Create the database and its schematics based on curatorial analysis of a record's JSON data structure.</li>
                         <li>Run a php script which inserts each record from the JSON files into the database.</li>
                         <li>Export filter/category data into a JSON cache file for the front-end to read on page-load and parse as html.</li>
                 </ul>
@@ -16,7 +16,7 @@
 </div>
 <div class="orbitron">Ingestion Failure</div>
 <div class="m24">
-        Even if a dataset is cleared for implementation during the curation process, the ingestion process for said dataset may be too taxing of a procedure. An example of a dataset likely to fail during ingestion would be a Mediawiki dataset which relies on too many Mediawiki extensions, or uses extensions which conflict with the custom-parser which determines the final html output of page data.
+        Even if a dataset is cleared for implementation during the curation process, the ingestion process for said dataset may be too taxing of a procedure. An example of a dataset likely to fail during ingestion would be a Mediawiki dataset which relies on too many Mediawiki extensions, or uses extensions which conflict with the custom-parser that determines the final html output.
 </div>
 <div class="orbitron">Synchronization</div>
 <div class="m24">
