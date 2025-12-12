@@ -1,10 +1,9 @@
 <div class="orbitron">Implementation Considerations</div>
 <div class="m24">
         <p>
-                Implementations are always in consideration. The collection will grow over time. Growing the collection normally involves curating external datasets. These are simple to evaluate because the data is usually handled via authentication through API. Sometimes institutions have unconventional means of providing data. The Louvre for example, has an endpoint which turns a page url into a json file, but it does not have an API to access these records otherwise. In order to retrieve the entire dataset, one must use their object export engine to get a full list of ID's to iterate through and create the appropriate urls to fetch all the json files. For edges cases such as these, consideration for implementation follows through with such investigations in order to see if ingestion and synchronization is possible.
+                Implementations are always in consideration. The collection will grow over time. Growing the collection is not limited to, yet normally involves curating external datasets. These are simple to evaluate because the data is usually handled via authentication through API. Sometimes institutions have unconventional means of providing data. The Louvre for example, has an endpoint which turns a page url into a json file, but it does not have an API to access these records otherwise. In order to retrieve the entire dataset, one must use their object export engine to get a full list of ID's to iterate through and create the appropriate urls to fetch all of the json files. For edges cases such as these, consideration for implementation follows through with such investigations in order to see if ingestion and synchronization is possible.
         </p>
         <p>
                A case for development which requires careful consideration due to workload implications is the repurposing of established systems. Any system which contains open-data that is as abundant as Mediawiki is deserving of development.
-                
         </p>    
 </div>
