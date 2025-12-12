@@ -1,27 +1,27 @@
 <p>
         Mediawiki at the library does not run as a stand-alone application like it usually does on the web. It is instead used as a php-library which manages data and serves raw wikitext that is parsed with a set of php scripts. Wikitext parsing is an ongoing task. Every Mediawiki dataset so far has had different tables and templates, which requires writing of more parsing rules. Out of a multi-thousand page dataset, it is dutiful to go through enough of its page types to evaluate the output for parsing errors, especially if the dataset has had a history of varied page construction such as the Hot Wheels Wiki. 
 </p>
-
-<div class="orbitron">Data</div>
-<div class="m24">
-        Mediawiki data flow for dataset implementation:
-        <ul>
-                <li>Make a structural copy of the Mediawiki database.</li>
-                <li>Import the latest wikimedia or fandom dump into the database via Mediawiki's import maintenance script.</li>
-                <li>Get a list of all the latest pages from the live server and download them as JSON files via php script.</li>
-                <li>Insert and update the records with the JSON files via Mediawiki's  create/update maintenance script.</li>
-                <li>With a php script, read each page from the database to get every available unique image link. Construct the urls to address the appropriate server and download every discovered image in the dataset.</li>
-                <li>Query for pages in the front-end to create new parsing rules wherever there is any failure in output.</li>
-                <li>Write a table of contents for dataset navigation.</li>
-        </ul>
-</div>
+<p>Mediawiki data flow for dataset implementation:</p>
+<ul>
+        <li>Make a structural copy of the Mediawiki database.</li>
+        <li>Import the latest wikimedia or fandom dump into the database via Mediawiki's import maintenance script.</li>
+        <li>Get a list of all the latest pages from the live server and download them as JSON files via php script.</li>
+        <li>Insert and update the records with the JSON files via Mediawiki's  create/update maintenance script.</li>
+        <li>With the <em>mass image downloader</em> php script, read each page from the database to get every available unique image link. Construct the urls to address the appropriate server and download every discovered image in the dataset.</li>
+        <li>Query for pages in the front-end to create new parsing rules wherever there is any failure in output.</li>
+        <li>Write a table of contents or index for user dataset navigation.</li>
+</ul>
 <div class="orbitron">Parsing</div>
 <div class="m24">
-        <p>The library does not use any template html or css native to Mediawiki datasets. This allows all datasets to use the same css styles of the library while also making unruly elements such as tables (with too many columns) become readable in a narrow viewing space, by interpreting wikitext that is meant for tables as responsive carded structure instead. A Mediawiki implementation serves to improve readability and access in multiple ways while minimizing sacrifices. For example, since <em>table of contents</em> is a newly introduced user-interface element that takes up horizontal space, removed are the <em>infoboxes</em> in the top right side of the page that are a common part of wikipedia layouts. These elements are instead rendered on top of the article as if the page were always in mobile view.</p>
+        <p>The library does not use any template html or css native to Mediawiki datasets. It instead runs a series of scripts to parse wikitext to output its own html. This allows all datasets to use the same css styles of the library while also making unruly elements such as tables (with too many columns) become readable in a narrow viewing space, by interpreting wikitext that is meant for tables as responsive carded structure instead. A Mediawiki implementation serves to improve readability and access while minimizing compromise. For example, since <em>table of contents</em> is a newly introduced user-interface element that takes up horizontal space, removed are the <em>infoboxes</em> in the top right side of the page that are a common part of wikipedia layouts. These elements are instead rendered on top of the article as if the page were always in mobile view.</p>
         <p>
-
+                The parsing scripts are orchestrated with quite a bit of steps. They have been refactored over time to respect parse-order and maintain integrity across every Mediawiki implementation. There are parsers for whatever kind of template that any implementation has forced into development. Onward from the third implementation is a switch statement which allows for all new parsing rules to be split into separate <em>includes</em>.
         </p>
 </div>
 <div class="orbitron">File Management</div>
 <div class="m24">
+        <p>
+                The parsing orchestration also calls a image-manager function that gets all the images from the parsed page and downloads any files that are missing from the local disk. The <em>mass image downloader</em> script  uses the same process because its code was derived from this image-manager function.
+                Images that fail to download are logged to a file as a last resort. Upon inspection after stabilizing the script, most failures are because the files don't exist on the live server.
+        </p>
 </div>
