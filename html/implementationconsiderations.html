@@ -1,13 +1,14 @@
 <div class="orbitron">Implementation Considerations</div>
 <div class="m24">
-        <p>The library is not limited to the presentation of external datasets. It has the Music Theory application and its own dictionary that is always available at the bottom left side of the screen.  </p>
-
+        <p>
+                What normally undergoes curation for implementation are external datasets. These are simple to evaluate because the data is usually handled via authentication through API. As long as the API is not rate-limited with extreme artificial restrictions like the one's provided by commercial entities, it is usually capable of being implemented. 
+        </p>
+        <p>Some implementations require entire systems built around them, such as all Mediawiki datasets. Mediawiki does not run as a stand-alone application as usual at the library. It is instead used as a php library which manages data and serves raw wikitext which is parsed manually with a set of php scripts. This allows all Mediawiki datasets to use the same css styles of the library while also making unruly elements such as tables with too many columns become readable in a narrow viewing space by turning the tables into carded data. If any system contains open-data that is as abundant as Mediawiki, then it deserves to be developed for so that the system becomes a part of the library.</p>
 </div>
 <div class="orbitron">Article Base</div>
 <div class="m24">
-
-        <p>
-                An article base would serve human written &amp; composed articles of any topics under-represented by other implementations. Navigation starts from an organized index page, similar to how other datasets generally present themselves. The bespoke nature of a human written article allows for the shaping of information that is beyond what ordered records are able to accomplish on their own. Such content would fill in cultural and historical gaps, topics that are absent from all accumulated datasets. 
+        <p>The library is not limited to the presentation of external datasets. It has the Music Theory application and its own dictionary that is always available at the bottom left side of the screen. Knowing this, it is possible to create more in-house applications to fill the gaps of the external datasets.
+                An article base would be a new application type which serves human written &amp; composed articles of any topics under-represented by other implementations. Navigation starts from an organized index page, similar to how other datasets generally present themselves. The bespoke nature of a human written article allows for the shaping of information that is beyond what ordered records are able to accomplish on their own. Such content would fill in cultural and historical gaps, topics that are absent from all accumulated datasets. 
         </p>
         <p>
                 An implementation such as an article base would be green-lit when progress for institutional API's have settled. It would require a content management system on the front-end with a new database on server-side. Data structures are up in the air as of yet, which is an exciting part of development. It can be anything, collections of static html, ordered JSON data that is parsed on page load, or even be its own Mediawiki dataset where pages are composed in the Mediawiki editor. 
