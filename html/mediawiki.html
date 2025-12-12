@@ -6,8 +6,8 @@
         <li>Make a structural copy of the Mediawiki database.</li>
         <li>Import the latest wikimedia or fandom dump into the database via Mediawiki's import maintenance script.</li>
         <li>Get a list of all the latest pages from the live server and download them as JSON files via php script.</li>
-        <li>Insert and update the records with the JSON files via Mediawiki's  create/update maintenance script.</li>
-        <li>With the <em>mass image downloader</em> php script, read each page from the database to get every available unique image link. Construct the urls to address the appropriate server and download every discovered image in the dataset.</li>
+        <li>Insert and update records with the JSON files via Mediawiki's  create/update maintenance script.</li>
+        <li>With the <em>mass image downloader</em> php script, read each page from the database to get every available unique image link. Normalize file names and construct the urls to download every discovered image in the dataset.</li>
         <li>Query for pages in the front-end to create new parsing rules wherever there is any failure in output.</li>
         <li>Write a table of contents or index for user dataset navigation.</li>
 </ul>
