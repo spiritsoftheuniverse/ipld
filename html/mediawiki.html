@@ -4,13 +4,24 @@
 
 <div class="orbitron">Data</div>
 <div class="m24">
-        Mediawiki data usually starts with an import (via maintenance script) of the latest wikimedia or fandom dump. 
+        Mediawiki data flow for dataset implementation:
+        <ul>
+                <li>Make a structural copy of the Mediawiki database.</li>
+                <li>Import the latest wikimedia or fandom dump into the database via Mediawiki's import maintenance script.</li>
+                <li>Get a list of all the latest pages from the live server and download them as JSON files via php script.</li>
+                <li>Insert and update the records with the JSON files via Mediawiki's  create/update maintenance script.</li>
+                <li>With a php script, read each page from the database to get every available unique image link. Construct the urls to address the appropriate server and download every discovered image in the dataset.</li>
+                <li>Query for pages in the front-end to create new parsing rules wherever there is any failure in output.</li>
+                <li>Write a table of contents for dataset navigation.</li>
+        </ul>
 </div>
 <div class="orbitron">Parsing</div>
 <div class="m24">
-        The library does not use any template html or css native to Mediawiki datasets. This allows all datasets to use the same css styles of the library while also making unruly elements such as tables (with too many columns) become readable in a narrow viewing space, by interpreting wikitext that is meant for tables as responsive carded structure instead. A Mediawiki implementation serves to improve readability and access in multiple ways while minimizing sacrifices. For example, since <em>table of contents</em> is a newly introduced user-interface element that takes up horizontal space, removed are the <em>infoboxes</em> in the top right side of the page that are a common part of wikipedia layouts. These elements are instead rendered on top of the article as if the page were always in mobile view.
+        <p>The library does not use any template html or css native to Mediawiki datasets. This allows all datasets to use the same css styles of the library while also making unruly elements such as tables (with too many columns) become readable in a narrow viewing space, by interpreting wikitext that is meant for tables as responsive carded structure instead. A Mediawiki implementation serves to improve readability and access in multiple ways while minimizing sacrifices. For example, since <em>table of contents</em> is a newly introduced user-interface element that takes up horizontal space, removed are the <em>infoboxes</em> in the top right side of the page that are a common part of wikipedia layouts. These elements are instead rendered on top of the article as if the page were always in mobile view.</p>
+        <p>
+
+        </p>
 </div>
 <div class="orbitron">File Management</div>
 <div class="m24">
-        The library does not use any template html or css native to Mediawiki datasets. This allows all datasets to use the same css styles of the library while also making unruly elements such as tables (with too many columns) become readable in a narrow viewing space, by interpreting wikitext that is meant for tables as responsive carded structure instead. A Mediawiki implementation serves to improve readability and access in multiple ways while minimizing sacrifices. For example, since <em>table of contents</em> is a newly introduced user-interface element that takes up horizontal space, removed are the <em>infoboxes</em> in the top right side of the page that are a common part of wikipedia layouts. These elements are instead rendered on top of the article as if the page were always in mobile view.
 </div>
