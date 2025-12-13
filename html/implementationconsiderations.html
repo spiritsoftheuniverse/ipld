@@ -4,6 +4,9 @@
                 Implementations are always in consideration. The collection will grow over time. Growing the collection is not limited to, yet normally involves curating external datasets. These are simple to evaluate because the data is usually handled via authentication through API. Sometimes institutions have unconventional means of providing data. The Louvre for example, has an endpoint which turns a page url into a json file, but it does not have an API to access these records otherwise. In order to retrieve the entire dataset, one must use their object export engine to get a full list of ID's to iterate through and create the appropriate urls to fetch all of the json files. For edges cases such as these, consideration for implementation follows through with such investigations in order to see if ingestion and synchronization is possible.
         </p>
         <p>
-               A case for development which requires careful consideration due to workload implications is the repurposing of established systems. Any system which contains open-data that is as abundant as Mediawiki is deserving of development.
+                In some cases such as the Library of Congress where rate limiting is rather severe, it is still worth implementing the dataset because the quality is so high. Between the downloading of each record the ingestion script must wait 6 seconds. The bulk download is scheduled to take a few weeks.
+        </p>
+        <p>
+               A case for development which requires careful consideration due to workload implications is the repurposing of established systems. Any system which contains open-data that is as abundant as Mediawiki is deserving of development. Developing of new systems has been and still could remain a part of implementation work. With the amount of data still on the horizon however, it is fruitful to resume the acquisition of external datasets.
         </p>    
 </div>
