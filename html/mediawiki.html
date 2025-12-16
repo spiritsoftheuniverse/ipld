@@ -15,13 +15,13 @@
 <div class="m24">
         <p>The library does not use any template html or css native to Mediawiki datasets. It instead runs a series of scripts to parse wikitext to output its own html. This allows all datasets to use the same css styles of the library while also making unruly elements such as tables (with too many columns) become readable in a narrow viewing space, by interpreting wikitext that is meant for tables as responsive carded structure instead. A Mediawiki implementation serves to improve readability and access while minimizing compromise. For example, since <em>table of contents</em> is a newly introduced user-interface element that takes up horizontal space, removed are the <em>infoboxes</em> in the top right side of the page that are a common part of wikipedia layouts. These elements are instead rendered on top of the article as if the page were always in mobile view.</p>
         <p>
-                The parsing scripts have been refactored over time to respect parsing-order and maintain integrity across every Mediawiki implementation. There are parser functions written for whatever kind of template comes along the way. A switch statement which compares datasets was introduced so that new parsing rules are split into separate <em>includes</em>.
+                The parsing scripts have been rewritten over time to respect parsing-order and maintain integrity across every Mediawiki implementation. There are parser functions written for whatever kind of template comes along the way. A switch statement which compares datasets was introduced so that new parsing rules are split into separate <em>includes</em>.
         </p>
 </div>
 <div class="orbitron">File Management</div>
 <div class="m24">
         <p>
-                The parsing orchestration also calls a image-manager function that gets all the images from the parsed page and downloads any files that are missing from the local disk. Images that fail to download are logged to a file as a last resort. After stabilizing the script, most failures happen because the files don't exist on the live server. The <em>mass image downloader</em> script  uses the same process because its code was derived from this image-manager function. The function took weeks of refactoring for it to reach its final state.
+                The parsing orchestration also calls a image-manager function that gets all the images from the parsed page and downloads any files that are missing from the local disk. Images that fail to download are logged to a file as a last resort. After stabilizing the script, most failures happen because the files don't exist on the live server. The <em>mass image downloader</em> script  uses the same process because its code was derived from this image-manager function. The function took weeks of rewriting for it to reach its final state.
         </p>
         <p> The process in which the image-manager function operates:</p>
         <ul>

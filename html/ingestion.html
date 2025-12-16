@@ -1,5 +1,9 @@
 <div class="orbitron">Ingestion</div>
 <div class="m24">
+        <p>
+                Ingestion of datasets is a regular job. At times, half of the threads from the CPU are running ingestion scripts in concurrency. Some datasets takes minutes, hours, or days to ingest. Few take months. Ingestion scripts are written with respect for all rate-limits. 
+                In the case of missing data from earlier, less experienced ingestions, a new script is written in order to map the full data, and the ingestion is restarted from the first record.
+        </p>
         <p>The general flow of dataset ingestion from an API to local disk:</p>
                 <ul>
                         <li>Run a php script which iterates through facets of an API and saves each record as an individual JSON file.</li>
@@ -25,7 +29,7 @@
                 Every implementation that is capable of data-synchronization is listed as a toggle button which is used to determine what CLI script is to be ran.
                 There are currently no automation tools for synchronization such as cron jobs since every sync job as of yet still requires being present for debugging.
         </p>
-        <p>A php synchronization script for datasets from APIs is ideally a refactored version of the ingestion script which automatically inserts new records into the database or updates them directly instead of saving them as JSON files. </p>
+        <p>A php synchronization script for datasets from APIs is ideally a rewritten version of the ingestion script that automatically inserts new records into the database or updates them directly instead of saving them as JSON files. </p>
         <p>
                 Some synchronization involves clearing an entire database and reinserting data from a freshly downloaded dump. Implemented datasets which synchronize using this method include Rebrickable, PokemonTCG, and Scryfall, as they regularly dump their databases.
         </p>
